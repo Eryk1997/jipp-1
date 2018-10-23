@@ -6,7 +6,10 @@ CONFIG -= qt
 SOURCES += \
     trojkat.cpp \
     main.cpp \
-    point2d.cpp
+    point2d.cpp \
+    rectangle.cpp \
+    circle.cpp \
+    triangle.cpp
 
 unix:!macx: LIBS += -L$$PWD/sigil-linux-gcc/ -lsigil
 
@@ -15,4 +18,7 @@ DEPENDPATH += $$PWD/sigil-linux-gcc/include
 
 HEADERS += \
     trojkat.h \
-    point2d.h
+    point2d.h \
+    rectangle.h \
+    circle.h \
+    triangle.h
