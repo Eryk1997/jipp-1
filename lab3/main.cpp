@@ -18,5 +18,11 @@ int main()
     cout << "S: " << S1.area() << endl;
     cout << "POROWNANIE" <<endl;
     cout << T1.hasGreaterArea(C1) << endl;
+
+    cout << "WAGA " << endl;
+    cout << "R1: " <<  sizeof(R1) << endl;
+    cout << "S1: " <<  sizeof(S1) << endl;
+    cout << "T1: " <<  sizeof(T1) << endl;
+    cout << "C1: " <<  sizeof(C1) << endl;
     return 0;
 }

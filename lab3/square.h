@@ -7,6 +7,7 @@ class Square : public Rectangle
 public:
     Square();
     Square(Point2D p, double x);
+    //void mul(double);
 };
 
 #endif // SQUARE_H
