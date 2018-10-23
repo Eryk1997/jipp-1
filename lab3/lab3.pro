@@ -7,10 +7,12 @@ SOURCES += main.cpp \
     triangle.cpp \
     rectangle.cpp \
     point2d.cpp \
-    circle.cpp
+    circle.cpp \
+    square.cpp
 
 HEADERS += \
     triangle.h \
     rectangle.h \
     point2d.h \
-    circle.h
+    circle.h \
+    square.h

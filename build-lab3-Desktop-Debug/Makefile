@@ -54,12 +54,14 @@ SOURCES       = ../lab3/main.cpp \
 		../lab3/triangle.cpp \
 		../lab3/rectangle.cpp \
 		../lab3/point2d.cpp \
-		../lab3/circle.cpp 
+		../lab3/circle.cpp \
+		../lab3/square.cpp 
 OBJECTS       = main.o \
 		triangle.o \
 		rectangle.o \
 		point2d.o \
-		circle.o
+		circle.o \
+		square.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -131,11 +133,13 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../lab3/lab3.pro triangle.h \
 		rectangle.h \
 		point2d.h \
-		circle.h ../lab3/main.cpp \
+		circle.h \
+		square.h ../lab3/main.cpp \
 		../lab3/triangle.cpp \
 		../lab3/rectangle.cpp \
 		../lab3/point2d.cpp \
-		../lab3/circle.cpp
+		../lab3/circle.cpp \
+		../lab3/square.cpp
 QMAKE_TARGET  = lab3
 DESTDIR       = 
 TARGET        = lab3
@@ -330,7 +334,9 @@ compiler_clean:
 ####### Compile
 
 main.o: ../lab3/main.cpp ../lab3/rectangle.h \
-		../lab3/point2d.h
+		../lab3/point2d.h \
+		../lab3/circle.h \
+		../lab3/triangle.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../lab3/main.cpp
 
 triangle.o: ../lab3/triangle.cpp ../lab3/triangle.h \
@@ -347,6 +353,11 @@ point2d.o: ../lab3/point2d.cpp ../lab3/point2d.h
 circle.o: ../lab3/circle.cpp ../lab3/circle.h \
 		../lab3/point2d.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o circle.o ../lab3/circle.cpp
+
+square.o: ../lab3/square.cpp ../lab3/square.h \
+		../lab3/rectangle.h \
+		../lab3/point2d.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o square.o ../lab3/square.cpp
 
 ####### Install
 

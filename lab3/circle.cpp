@@ -1,5 +1,5 @@
 #include "circle.h"
-
+#include "math.h"
 Circle::Circle()
 {
     center=Point2D(0,0);
@@ -11,5 +11,5 @@ Circle::Circle(Point2D center,double r)
 }
 
 double Circle::area(){
-return r*r*3.14;
+return r*r*M_PI;
 }

@@ -1,7 +1,8 @@
 #ifndef TRIANGLE_H
 #define TRIANGLE_H
 #include "point2d.h"
-
+#include "rectangle.h"
+#include "circle.h"
 class Triangle
 {
 private:
@@ -12,6 +13,8 @@ public:
     Triangle();
     Triangle(Point2D p1,double width, double height);
     double area();
+    bool hasGreaterArea(Rectangle r);
+    bool hasGreaterArea(Circle c);
 };
 
 #endif // TRIANGLE_H

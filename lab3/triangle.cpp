@@ -13,3 +13,11 @@ Triangle::Triangle(Point2D p1,double width, double height)
 double Triangle::area(){
     return width*height/2;
 }
+bool Triangle::hasGreaterArea(Rectangle r)
+{
+    return ( this->area()  > r.area() );
+}
+bool Triangle::hasGreaterArea(Circle c)
+{
+    return ( this->area()  > c.area() );
+}
